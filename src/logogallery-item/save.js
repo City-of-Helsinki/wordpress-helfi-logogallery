@@ -20,12 +20,13 @@ export default function save(props) {
 	const { attributes } = props
 
 	const { imageUrl, linkUrl, imageAlt } = attributes;
+	const ConditionalWrapper = ({ condition, wrapper, children }) => condition ? wrapper(children) : children;
 
 	return (
 		<div {...useBlockProps.save()}>
-			<a href={linkUrl}>
+			<ConditionalWrapper condition={linkUrl} wrapper={children => <a href={linkUrl}>{children}</a>} >
 				<img src={imageUrl} alt={imageAlt} />
-			</a>
+			</ConditionalWrapper>
 		</div>
 	);
 }
