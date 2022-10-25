@@ -19,5 +19,5 @@
 		"@wordpress/data": "^7.4.0",
 		"@wordpress/icons": "^9.11.0",
 		"lodash": "^4.17.21"
-	},
+	}
 }
