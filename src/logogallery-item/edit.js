@@ -11,9 +11,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, BlockControls, MediaReplaceFlow, MediaPlaceholder, MediaUpload, URLInputButton } from '@wordpress/block-editor';
-import { Toolbar, ToolbarButton, IconButton } from '@wordpress/components';
-import { link } from '@wordpress/icons';
+import { useBlockProps, BlockControls, MediaReplaceFlow, MediaUpload, URLInputButton } from '@wordpress/block-editor';
+import { ToolbarGroup, Button } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -71,13 +70,13 @@ export default function Edit(props) {
 		<>
 			<section {...useBlockProps()}>
 				<BlockControls>
-					<Toolbar>
+					<ToolbarGroup>
 						<MediaUpload
 							onSelect={onSelectMedia}
 							allowedTypes={['image']}
 							value={imageUrl}
 							render={({ open }) => (
-								<IconButton
+								<Button
 									className="components-toolbar__control"
 									label={__('Edit media')}
 									icon="format-image"
@@ -89,17 +88,11 @@ export default function Edit(props) {
 							url={linkUrl}
 							onChange={onSelectUrl}
 						/>
-					</Toolbar>
+					</ToolbarGroup>
 				</BlockControls>
-				{imageUrl && <img src={imageUrl} alt={imageAlt} />}
-				<MediaReplaceFlow
-					mediaUrl={imageUrl}
-					allowedTypes={['image']}
-					accept="image/*"
-					onSelect={onSelectMedia}
-					name={!imageUrl ? __('Add Image') : __('Replace Image')}
-				/>
-
+				<div className="logogallery-item-edit">
+					{imageUrl ? <img src={imageUrl} alt={imageAlt} /> : __('Insert new image')}
+				</div>
 			</section>
 		</>
 	);
