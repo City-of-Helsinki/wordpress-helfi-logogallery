@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "wordpress-helfi/logogallery-item",
+	"version": "0.1.0",
+	"title": "Logo Gallery Item",
+	"category": "text",
+	"icon": "edit-page",
+	"description": ".",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"linkUrl": "string",
+		"imageUrl": {
+			"type": "string"
+		},
+		"imageId": {
+			"type": "number"
+		},
+		"imageAlt": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "alt",
+			"default": ""
+		}
+	},
+	"textdomain": "logo-gallery",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"parent": [
+		"wordpress-helfi/logogallery-container"
+	]
+}
