@@ -11,7 +11,12 @@
 		"html": false
 	},
 	"attributes": {
-		"linkUrl": "string",
+		"linkUrl": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "href"
+		},
 		"imageUrl": {
 			"type": "string"
 		},
