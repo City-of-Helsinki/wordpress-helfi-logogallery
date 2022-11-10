@@ -5,7 +5,7 @@
 	"version": "0.1.0",
 	"title": "Logo Gallery",
 	"category": "design",
-	"icon": "gallery",
+	"icon": "format-gallery",
 	"description": ".",
 	"supports": {
 		"html": false
@@ -13,5 +13,12 @@
 	"textdomain": "logo-gallery",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"style": "file:./style-index.css",
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2"
+		}
+	}
 }

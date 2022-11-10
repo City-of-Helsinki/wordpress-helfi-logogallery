@@ -10,3 +10,32 @@
 	color: #fff;
 	padding: 2px;
 }
+
+.grid {
+	&.sponsors-wrapper {
+		img {
+			max-height: 150px;
+			width: auto;
+		}
+	}
+
+	&_margin {
+		.no-mt {
+			margin-top: 0;
+		}
+	}
+
+	&__column {
+		display: flex;
+		justify-content: center;
+	}
+
+	a {
+		display: block;
+	}
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}

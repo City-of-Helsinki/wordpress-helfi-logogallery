@@ -23,7 +23,7 @@ export default function save(props) {
 	const ConditionalWrapper = ({ condition, wrapper, children }) => condition ? wrapper(children) : children;
 
 	return (
-		<div {...useBlockProps.save()}>
+		<div className='grid__column grid_margin no-mt' {...useBlockProps.save()}>
 			<ConditionalWrapper condition={linkUrl} wrapper={children => <a href={linkUrl}>{children}</a>} >
 				<img src={imageUrl} alt={imageAlt} />
 			</ConditionalWrapper>

@@ -10,3 +10,63 @@
 	color: #fff;
 	padding: 2px;
 }
+
+.wp-block-wordpress-helfi-logogallery-container {
+	h2, h2.block-editor-rich-text__editable {
+		color: var(--color-white) !important;
+	}
+}
+
+.alignfull {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+	background-color: var(--color-bus);
+}
+
+.hds-container {
+	h2 {
+		padding-top: 24px;
+		padding-left: 24px;
+	}
+	padding-bottom: var(--spacing-l);
+}
+
+.content {
+	&__body {
+		.hds-container :first-child{
+			margin-top: 0 !important;
+		}
+	}
+}
+
+.grid{
+	&_margin {
+		margin-top: var(--spacing-3-xl);
+		margin-bottom: var(--spacing-3-xl);
+	}
+
+	&.sponsors-wrapper{
+			width: auto;
+			margin: 0;
+			img{
+					max-height: 150px;
+					width: auto;
+			}
+			.grid__column{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+			}
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	.hds-container {
+		h2 {
+			padding-left: 24px;
+			margin-left: 24px;
+		}
+	}
+}

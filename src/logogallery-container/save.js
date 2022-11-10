@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks, RichText } from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -15,10 +15,21 @@ import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save( {attributes}) {
 	return (
 		<section { ...useBlockProps.save() }>
-			<InnerBlocks.Content />
+			<div className='alignfull'>
+				<div className='hds-container'>
+					<div className='grid'>
+						<div className='class="grid__column l-12 grid_margin"'>
+							<RichText.Content tagName="h2" value={ attributes.heading } />
+						</div>
+					</div>
+					<div className='grid sponsors-wrapper l-up-5 m-up-3 s-up-2 alignfull'>
+						<InnerBlocks.Content />
+					</div>
+				</div>
+			</div>
 		</section>
 	);
 }

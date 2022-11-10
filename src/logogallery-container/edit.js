@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks, RichText } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -31,11 +31,14 @@ import './editor.scss';
  */
 
 const ALLOWED_BLOCKS = [ 'wordpress-helfi/logogallery-item' ];
-export default function Edit() {
+export default function Edit({setAttributes, attributes}) {
 	return (
 		<section { ...useBlockProps() }>
-			Lisää:
-			<InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } />
+			<RichText tagName='h2' value={ attributes.heading } // Any existing content, either from the database or an attribute default
+                onChange={ ( heading ) => setAttributes( { heading } ) } // Store updated content as a block attribute
+                placeholder={ __( 'Heading...' ) } // Display this text before any content has been added by the user
+								/>
+			<InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } orientation="horizontal" />
 		</section>
 	);
 }
