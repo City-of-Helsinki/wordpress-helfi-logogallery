@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, BlockControls, MediaReplaceFlow, MediaUpload, URLInputButton } from '@wordpress/block-editor';
+import { useBlockProps, BlockControls, MediaUpload, URLInputButton } from '@wordpress/block-editor';
 import { ToolbarGroup, Button } from '@wordpress/components';
 
 /**
@@ -33,67 +33,65 @@ import './editor.scss';
 
 import { get } from 'lodash';
 
-export default function Edit(props) {
-
-	const { className, attributes, setAttributes } = props
-	const { show, imageUrl, linkUrl, imageAlt } = attributes;
+export default function Edit( props ) {
+	const { attributes, setAttributes } = props;
+	const { imageUrl, linkUrl, imageAlt } = attributes;
 	const IMAGE_SIZE = 'medium';
 
-	const onSelectMedia = (media) => {
-
+	const onSelectMedia = ( media ) => {
 		// Try the "large" size URL, falling back to the "full" size URL below.
-		let src = get(media, ['sizes', IMAGE_SIZE, 'url']) || get(media, ['media_details', 'sizes', IMAGE_SIZE, 'source_url']);
+		const src = get( media, [ 'sizes', IMAGE_SIZE, 'url' ] ) || get( media, [ 'media_details', 'sizes', IMAGE_SIZE, 'source_url' ] );
 
-		if (!media || !media.url) {
-			setAttributes({
+		if ( ! media || ! media.url ) {
+			setAttributes( {
 				imageUrl: null,
 				imageId: null,
 				imageAlt: null,
-			});
+			} );
 			return;
 		}
 
-		setAttributes({
+		setAttributes( {
 			imageUrl: src || media.url,
 			imageId: media.id,
 			imageAlt: media?.alt,
-		});
-	}
+		} );
+	};
 
-	const onSelectUrl = (url, post) => {
-		setAttributes({
-			linkUrl: url
-		});
-	}
+	const onSelectUrl = ( url ) => {
+		setAttributes( {
+			linkUrl: url,
+		} );
+	};
+
+	const blockProps = useBlockProps( { className: 'wp-block-wordpress-helfi-logogallery-item grid__column grid_margin no-mt' } );
 
 	return (
-		<>
-			<section {...useBlockProps()}>
-				<BlockControls>
-					<ToolbarGroup>
-						<MediaUpload
-							onSelect={onSelectMedia}
-							allowedTypes={['image']}
-							value={imageUrl}
-							render={({ open }) => (
-								<Button
-									className="components-toolbar__control"
-									label={__('Edit media')}
-									icon="format-image"
-									onClick={open}
-								/>
-							)}
-						/>
-						<URLInputButton
-							url={linkUrl}
-							onChange={onSelectUrl}
-						/>
-					</ToolbarGroup>
-				</BlockControls>
-				<div className="logogallery-item-edit">
-					{imageUrl ? <img src={imageUrl} alt={imageAlt} /> : __('Insert new image')}
-				</div>
-			</section>
-		</>
+		<div { ...blockProps }>
+			<BlockControls>
+				<ToolbarGroup>
+					<MediaUpload
+						onSelect={ onSelectMedia }
+						allowedTypes={ [ 'image' ] }
+						value={ imageUrl }
+						render={ ( { open } ) => (
+							<Button
+								className="components-toolbar__control"
+								label={ __( 'Edit media' ) }
+								icon="format-image"
+								onClick={ open }
+							/>
+						) }
+					/>
+					<URLInputButton
+						url={ linkUrl }
+						onChange={ onSelectUrl }
+					/>
+				</ToolbarGroup>
+			</BlockControls>
+			<div className="logogallery-item-edit">
+				{ imageUrl ? <img src={ imageUrl } alt={ imageAlt } /> : __( 'Insert new image' ) }
+			</div>
+		</div>
 	);
 }

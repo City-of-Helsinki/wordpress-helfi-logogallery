@@ -5,37 +5,26 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-logo-gallery {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
-}
+.wp-block-wordpress-helfi-logogallery-container {
 
-.grid {
-	&.sponsors-wrapper {
+	.wp-block-wordpress-helfi-logogallery-item {
+		margin-top: 0;
+
+		.wp-block-create-block-logo-gallery {
+			background-color: #21759b;
+			color: #fff;
+			padding: 2px;
+		}
+
+		a,
 		img {
-			max-height: 150px;
-			width: auto;
+			margin-top: 0 !important;
+			height: auto;
+			max-width: 100%;
+		}
+
+		&.no-mt {
+			margin-top: 0 !important;
 		}
 	}
-
-	&_margin {
-		.no-mt {
-			margin-top: 0;
-		}
-	}
-
-	&__column {
-		display: flex;
-		justify-content: center;
-	}
-
-	a {
-		display: block;
-	}
-}
-
-img {
-	height: auto;
-	max-width: 100%;
 }

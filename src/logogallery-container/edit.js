@@ -27,18 +27,30 @@ import './editor.scss';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  *
- * @return {WPElement} Element to render.
+ * @return { WPElement } Element to render.
  */
 
 const ALLOWED_BLOCKS = [ 'wordpress-helfi/logogallery-item' ];
-export default function Edit({setAttributes, attributes}) {
+export default function Edit( { setAttributes, attributes } ) {
+	const blockProps = useBlockProps( { className: 'grid__column grid_margin no-mt' } );
 	return (
-		<section { ...useBlockProps() }>
-			<RichText tagName='h2' value={ attributes.heading } // Any existing content, either from the database or an attribute default
-                onChange={ ( heading ) => setAttributes( { heading } ) } // Store updated content as a block attribute
-                placeholder={ __( 'Heading...' ) } // Display this text before any content has been added by the user
-								/>
-			<InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } orientation="horizontal" />
+		<section { ...blockProps }>
+			<div className="alignfull">
+				<div className="hds-container">
+					<div className="grid">
+						<div className='class="grid__column l-12 grid_margin"'>
+							<RichText tagName="h2" value={ attributes.heading } // Any existing content, either from the database or an attribute default
+								onChange={ ( heading ) => setAttributes( { heading } ) } // Store updated content as a block attribute
+								placeholder={ __( 'Heading…' ) } // Display this text before any content has been added by the user
+								className="logogallery-container-header-editable"
+							/>
+						</div>
+					</div>
+					<div className="grid sponsors-wrapper">
+						<InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } orientation="horizontal" />
+					</div>
+				</div>
+			</div>
 		</section>
 	);
 }
