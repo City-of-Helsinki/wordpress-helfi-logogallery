@@ -12,7 +12,7 @@ import { useBlockProps, InnerBlocks, RichText } from '@wordpress/block-editor';
  * editor into `post_content`.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
- * @param {attributes} attributes Contains html-attributes for h2
+ * @param {{attributes: {heading: string}}} attributes Contains html-attributes for h2
  * @return {WPElement} Element to render.
  */
 export default function save( { attributes } ) {
