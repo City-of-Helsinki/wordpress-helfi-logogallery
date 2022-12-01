@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:       Logo Gallery
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       Add block for Helsinki Theme that allows to create logo gallery with links
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Version:           0.1.0
- * Author:            The WordPress Contributors
+ * Author:            Ambientia
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       logo-gallery

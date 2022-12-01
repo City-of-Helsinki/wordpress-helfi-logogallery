@@ -1,13 +1,1 @@
-/*!*********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/logogallery-item/editor.scss ***!
-  \*********************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-create-block-logo-gallery {
-  border: 1px dotted #f00;
-}
-
-/*# sourceMappingURL=index.css.map*/
+.wp-block-wordpress-helfi-logogallery-container{background-color:var(--color-bus)}.wp-block-wordpress-helfi-logogallery-container .wp-block-wordpress-helfi-logogallery-item{align-items:center;display:flex;justify-content:center;width:20%!important}.wp-block-wordpress-helfi-logogallery-container .block-editor-block-list__layout{display:flex;flex-wrap:wrap;justify-content:flex-start}.wp-block-wordpress-helfi-logogallery-container h2{color:var(--color-white)!important}.wp-block-wordpress-helfi-logogallery-container .alignfull{background-color:var(--color-bus);margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);max-width:100vw;width:100vw}.wp-block-wordpress-helfi-logogallery-container .hds-container{padding-bottom:var(--spacing-l)}.wp-block-wordpress-helfi-logogallery-container .hds-container h2{padding-left:24px;padding-top:24px}.wp-block-wordpress-helfi-logogallery-container .logogallery-item-edit{color:var(--color-white)}.wp-block-wordpress-helfi-logogallery-container .components-button.block-list-appender__toggle.block-editor-button-block-appender svg{margin-top:0!important}.wp-block-wordpress-helfi-logogallery-container .hds-container :first-child{margin-top:var(--spacing-l)}.wp-block-wordpress-helfi-logogallery-container .grid_margin{margin-bottom:var(--spacing-3-xl);margin-top:var(--spacing-3-xl)}.wp-block-wordpress-helfi-logogallery-container .grid.sponsors-wrapper{display:block;margin:0;width:auto}.wp-block-wordpress-helfi-logogallery-container .grid.sponsors-wrapper img{max-height:150px;width:auto}.wp-block-wordpress-helfi-logogallery-container .grid.sponsors-wrapper .grid__column{align-items:center;display:flex;justify-content:center}@media only screen and (min-width:576px){.wp-block-wordpress-helfi-logogallery-container .hds-container h2{margin-left:24px;padding-left:24px}}

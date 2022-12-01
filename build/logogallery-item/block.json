@@ -5,13 +5,18 @@
   "version": "0.1.0",
   "title": "Logo Gallery Item",
   "category": "text",
-  "icon": "edit-page",
+  "icon": "plus",
   "description": ".",
   "supports": {
     "html": false
   },
   "attributes": {
-    "linkUrl": "string",
+    "linkUrl": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "href"
+    },
     "imageUrl": {
       "type": "string"
     },

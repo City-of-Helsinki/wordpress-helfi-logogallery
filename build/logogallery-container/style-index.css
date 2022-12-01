@@ -1,16 +1,1 @@
-/*!*************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/logogallery-container/style.scss ***!
-  \*************************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-create-block-logo-gallery {
-  background-color: #21759b;
-  color: #fff;
-  padding: 2px;
-}
-
-/*# sourceMappingURL=style-index.css.map*/
+.wp-block-wordpress-helfi-logogallery-container .wp-block-create-block-logo-gallery{background-color:#21759b;color:#fff;padding:2px}.wp-block-wordpress-helfi-logogallery-container h2{color:var(--color-white)!important}.wp-block-wordpress-helfi-logogallery-container .alignfull{background-color:var(--color-bus);margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);max-width:100vw;width:100vw}.wp-block-wordpress-helfi-logogallery-container .hds-container{padding-bottom:var(--spacing-l)}.wp-block-wordpress-helfi-logogallery-container .hds-container h2{padding-left:24px;padding-top:24px}.wp-block-wordpress-helfi-logogallery-container .hds-container :first-child{margin-top:var(--spacing-l)}.wp-block-wordpress-helfi-logogallery-container .grid_margin{margin-bottom:var(--spacing-3-xl);margin-top:var(--spacing-3-xl)}.wp-block-wordpress-helfi-logogallery-container .grid.sponsors-wrapper{margin:0;width:auto}.wp-block-wordpress-helfi-logogallery-container .grid.sponsors-wrapper img{max-height:150px;width:auto}.wp-block-wordpress-helfi-logogallery-container .grid.sponsors-wrapper .grid__column{align-items:center;display:flex;justify-content:center}@media only screen and (min-width:576px){.wp-block-wordpress-helfi-logogallery-container .hds-container h2{margin-left:24px;padding-left:24px}}
