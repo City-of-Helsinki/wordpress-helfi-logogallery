@@ -5,8 +5,26 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-logo-gallery {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.wp-block-wordpress-helfi-logogallery-container {
+
+	.wp-block-wordpress-helfi-logogallery-item {
+		margin-top: 0;
+
+		.wp-block-create-block-logo-gallery {
+			background-color: #21759b;
+			color: #fff;
+			padding: 2px;
+		}
+
+		a,
+		img {
+			margin-top: 0 !important;
+			height: auto;
+			max-width: 100%;
+		}
+
+		&.no-mt {
+			margin-top: 0 !important;
+		}
+	}
 }

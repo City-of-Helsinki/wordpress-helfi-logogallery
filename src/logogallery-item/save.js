@@ -16,16 +16,20 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @return {WPElement} Element to render.
  */
 
-export default function save(props) {
-	const { attributes } = props
+export default function save( props ) {
+	const { attributes } = props;
 
 	const { imageUrl, linkUrl, imageAlt } = attributes;
-	const ConditionalWrapper = ({ condition, wrapper, children }) => condition ? wrapper(children) : children;
+	const ConditionalWrapper = ( { condition, wrapper, children } ) => condition ? wrapper( children ) : children;
+
+	const blockProps = useBlockProps.save( {
+		className: 'grid__column grid_margin no-mt',
+	} );
 
 	return (
-		<div {...useBlockProps.save()}>
-			<ConditionalWrapper condition={linkUrl} wrapper={children => <a href={linkUrl}>{children}</a>} >
-				<img src={imageUrl} alt={imageAlt} />
+		<div { ...blockProps }>
+			<ConditionalWrapper condition={ linkUrl } wrapper={ ( children ) => <a href={ linkUrl }>{ children }</a> } >
+				<img src={ imageUrl } alt={ imageAlt } />
 			</ConditionalWrapper>
 		</div>
 	);
