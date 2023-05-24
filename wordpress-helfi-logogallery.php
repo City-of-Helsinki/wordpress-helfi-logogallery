@@ -4,7 +4,7 @@
  * Description:       Add block for Helsinki Theme that allows to create logo gallery with links
  * Requires at least: 5.9
  * Requires PHP:      7.0
- * Version:           0.1.0
+ * Version:           0.2.0
  * Author:            Ambientia
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
